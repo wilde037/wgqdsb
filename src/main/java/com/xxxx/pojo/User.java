@@ -1,4 +1,4 @@
-package com.xxxx.service.pojo;
+package com.xxxx.pojo;
 
 import java.util.Objects;
 

@@ -1,6 +1,6 @@
 package com.xxxx.service;
 
-import com.xxxx.service.pojo.User;
+import com.xxxx.pojo.User;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
@@ -16,7 +16,12 @@ public class UserService {
         users = new ArrayList<>();
         users.add(new User(1, "sb", "asd123", "dog", "", ""));
         users.add(new User(2, "test", "123456", "test", "", ""));
+
     }
+    public List getusers(){
+        return users;
+    }
+
 
     public void addUser(User user) {
         if (null == user) {
@@ -185,13 +190,6 @@ public class UserService {
             throw  new RuntimeException("用户密码不能为空!");
         }
 
-        /*for (User user : users) {
-            if(user.getUserName().equals(userName)){
-                if(user.getUserPwd().equals(userPwd)){
-                    System.out.println("用户登录成功!");
-                }
-            }
-        }*/
         Integer index=null;
         for (int i = 0; i < users.size(); i++) {
             if(users.get(i).getUserName().equals(userName)){

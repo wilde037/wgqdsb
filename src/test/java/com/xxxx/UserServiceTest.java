@@ -1,9 +1,11 @@
 package com.xxxx;
 
 import com.xxxx.service.UserService;
-import com.xxxx.service.pojo.User;
+import com.xxxx.pojo.User;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.List;
 
 public class UserServiceTest {
     private UserService userService=null;
@@ -36,7 +38,11 @@ public class UserServiceTest {
 
     @Test
     public void delUser(){
-
+        System.out.println("记录删除前.........");
+        userService.listUser();
+        userService.delUser(2);
+        System.out.println("记录删除后.........");
+        userService.listUser();
     }
 
 //    @Test
